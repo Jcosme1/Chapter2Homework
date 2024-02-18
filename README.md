@@ -1,0 +1,1 @@
+This program allows you to read recicpes and instructions from a few different breads. It uses inheritance for its methods and tostrings. There is one super class (Bread) and five subclasses (Bananabread, Naan, Sourdough, Muffins, PotatoBread).
