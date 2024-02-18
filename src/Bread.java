@@ -6,7 +6,13 @@ public class Bread {
     private double bakingPowder;
     private double yeast;
     private String breadName = "Bread";
-    private boolean  isBaked;
+    private double milk;
+    private double egg;
+    private double vegetableOil;
+    private double starter;
+    private boolean isBaked;
+    private double butter;
+    private double vanillaExtract;
 
     public Bread(){
         this.flour = 0;
@@ -19,7 +25,7 @@ public class Bread {
 
     }
 
-    public Bread(double flour, double water, double salt, double sugar, double bakingPowder, double yeast, String breadName,boolean isBaked){
+    public Bread(double flour, double water, double salt, double sugar, double bakingPowder, double yeast, String breadName,boolean isBaked, double egg, double milk, double vegetableOil, double starter,double butter,double vanillaExtract           ){
         this.flour = flour;
         this.water = water;
         this.salt = salt;
@@ -27,6 +33,13 @@ public class Bread {
         this.bakingPowder = bakingPowder;
         this.yeast = yeast;
         this.breadName = breadName;
+        this.milk = milk;
+        this.egg = egg;
+        this.vegetableOil = vegetableOil;
+        this.starter = starter;
+        this.butter = butter;
+        this.vanillaExtract = vanillaExtract;
+
 
     }
     //setters and getters
@@ -73,11 +86,53 @@ public class Bread {
         this.breadName = breadName;
     }
 
-    public boolean isBaked(){
-        return isBaked;
-    }
+
     public void setIsBaked(boolean baked){
         this.isBaked = baked;
+    }
+    public double getMilk(){
+        return milk;
+    }
+    public void setMilk(double milk){
+        this.milk = milk;
+    }
+    public double getEgg(){
+        return egg;
+    }
+    public void setEgg(double egg){
+        this.egg = egg;
+    }
+
+    public double getVegetableOil() {
+        return vegetableOil;
+    }
+
+    public void setVegetableOil(double vegetableOil) {
+        this.vegetableOil = vegetableOil;
+    }
+
+    public double getStarter() {
+        return starter;
+    }
+
+    public void setStarter(double starter) {
+        this.starter = starter;
+    }
+
+    public void setBaked(boolean baked) {
+        isBaked = baked;
+    }
+    public double getButter(){
+        return butter;
+    }
+    public void setButter(double butter) {
+        this.butter = butter;
+    }
+    public double getVanillaExtract(){
+        return vanillaExtract;
+    }
+    public void setVanillaExtract(double vanillaExtract) {
+        this.vanillaExtract = vanillaExtract;
     }
     public void getIngredients(){
         System.out.printf("Ingredients of %s are: \n", breadName);
@@ -86,7 +141,21 @@ public class Bread {
 
 
     }
+//    public String getIngredients(){
+//        return "Ingredients for " + breadName;
+//    }
     public void printIntstructions(){ //
 
+        System.out.printf("Instructions for %s:\n",breadName); //added this to if you get instructions for any bread it also shows the correct bread name
+    }
+
+    public void bake(boolean isBaked){
+        if(isBaked){
+            System.out.print(breadName +" is baked!");
+        }
+        else System.out.println(breadName + " is not baked!");
+    }
+    public String toString(){
+        return breadName + " has something I like:\n";
     }
 }
